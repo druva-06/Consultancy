@@ -1,19 +1,15 @@
 import { useEffect, useState } from "react";
 import DataBg from "../elements/DataBg";
-// import Breadcrumb from './Breadcrumb'
-// import PageHead from './PageHead'
 import Header from "./Header";
 import Footer from "./Footer";
 import MobileMenu from "./MobileMenu";
 import { Outlet } from "react-router-dom";
 
-export default function Layout({
-  headTitle,
-  breadcrumbTitle,
-}) {
+export default function Layout() {
   const [scroll, setScroll] = useState(0);
   // Moblile Menu
   const [isMobileMenu, setMobileMenu] = useState(false);
+
   const handleMobileMenu = () => {
     setMobileMenu(!isMobileMenu);
     !isMobileMenu
@@ -39,10 +35,9 @@ export default function Layout({
       />
 
       <main className="main-area fix">
-        {/* {breadcrumbTitle && <Breadcrumb breadcrumbTitle={breadcrumbTitle} />} */}
-
         <Outlet />
       </main>
+
       <Footer />
       <DataBg />
     </>

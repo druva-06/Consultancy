@@ -1,6 +1,7 @@
 import MobileMenu from "./MobileMenu";
 import logo from "../../assets/img/logo/logo.png";
 import cart from "../../assets/img/icons/cart.svg";
+import { Link } from "react-router-dom";
 
 export default function Header({ scroll, isMobileMenu, handleMobileMenu }) {
   return (
@@ -21,110 +22,126 @@ export default function Header({ scroll, isMobileMenu, handleMobileMenu }) {
                 <div className="tgmenu__wrap">
                   <nav className="tgmenu__nav">
                     <div className="logo">
-                      <a href="/">
+                      <Link to="/">
                         <img src={logo} alt="Logo" />
-                      </a>
+                      </Link>
                     </div>
                     <div className="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex">
                       <ul className="navigation">
-                        <li className="">
-                          <a href="/">About Us</a>
+                        <li>
+                          <Link to="/about-us">About Us</Link>
                         </li>
                         <li className="menu-item-has-children">
-                          <a href="/">Explore</a>
+                          <Link to="/">Explore</Link>
                           <ul className="sub-menu">
                             <li>
-                              <a href="/courses">All Courses</a>
+                              <Link to="/study-abroad">Study Abroad</Link>
                             </li>
                             <li>
-                              <a href="/course-details">Course Details</a>
+                              <Link to="/study-india">Study India</Link>
+                            </li>
+                            <li>
+                              <Link to="/study-online">Study Online</Link>
+                            </li>
+                            <li>
+                              <Link to="/jobs">Jobs</Link>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <Link to="/universities">Universities</Link>
+                        </li>
+                        <li className="menu-item-has-children">
+                          <Link to="/funds">Funds</Link>
+                          <ul className="sub-menu">
+                            <li>
+                              <Link to="/funds/education-loan-support">
+                                Education Loan Support
+                              </Link>
+                            </li>
+                            <li>
+                              <Link to="funds/student-credit-cards">
+                                Student Credit Cards
+                              </Link>
+                            </li>
+                            <li>
+                              <Link to="funds/forex-card-support">
+                                Forex Card Support
+                              </Link>
                             </li>
                           </ul>
                         </li>
                         <li className="menu-item-has-children">
-                          <a href="/">Funds</a>
+                          <Link to="/events">Events</Link>
                           <ul className="sub-menu">
                             <li>
-                              <a href="/about-us">About Us</a>
+                              <Link to="/events/group-discussions">
+                                Group Discussions
+                              </Link>
                             </li>
                             <li>
-                              <a href="/instructors">Our Instructors</a>
+                              <Link to="/events/live-events">Live Events</Link>
                             </li>
                             <li>
-                              <a href="/instructor-details">
-                                Instructor Details
-                              </a>
+                              <Link to="/events/in-house-events">
+                                In-House Events
+                              </Link>
                             </li>
                             <li>
-                              <a href="/mentors">Our Mentors</a>
+                              <Link to="/events/career-sessions">
+                                Career Sessions
+                              </Link>
                             </li>
                             <li>
-                              <a href="/events">Our Events</a>
+                              <Link to="/events/guest-lectures">
+                                Guest Lectures
+                              </Link>
                             </li>
                             <li>
-                              <a href="/events-details">Event Details</a>
-                            </li>
-                            <li>
-                              <a href="/faq">Asked Question</a>
-                            </li>
-                            <li>
-                              <a href="/404">404 Page</a>
-                            </li>
-                            <li>
-                              <a href="/contact">contact</a>
+                              <Link to="/events/workshops">Workshops</Link>
                             </li>
                           </ul>
                         </li>
                         <li className="menu-item-has-children">
-                          <a href="/">Events</a>
+                          <Link to="/services">Services</Link>
                           <ul className="sub-menu">
                             <li>
-                              <a href="/shop">Shop Page</a>
+                              <Link to="/services/profile-development">
+                                Profile Development
+                              </Link>
                             </li>
                             <li>
-                              <a href="/shop-details">Shop Details</a>
+                              <Link to="/services/course-selection">
+                                Course Selection
+                              </Link>
+                            </li>
+                            <li>
+                              <Link to="/services/interview-preparation">
+                                Interview Preparation
+                              </Link>
                             </li>
                           </ul>
                         </li>
-                        <li className="menu-item-has-children">
-                          <a href="/">Services</a>
-                          <ul className="sub-menu">
-                            <li>
-                              <a href="/blog-grid">Blog Grid</a>
-                            </li>
-                            <li>
-                              <a href="/blog">Blog Standard</a>
-                            </li>
-                            <li>
-                              <a href="/blog-details">Blog Details</a>
-                            </li>
-                          </ul>
+                        <li>
+                          <Link to="/blogs">Blogs</Link>
                         </li>
-                        <li className="">
-                          <a href="/">Blog</a>
-                        </li>
-                        <li className="">
-                          <a href="/">Contact Us</a>
+                        <li>
+                          <Link to="/contact-us">Contact Us</Link>
                         </li>
                       </ul>
                     </div>
                     <div className="tgmenu__action">
                       <ul className="list-wrap">
                         <li className="mini-cart-icon">
-                          <a href="/shop" className="cart-count">
+                          <Link to="/cart" className="cart-count">
                             <img src={cart} alt="cart" />
                             <span className="mini-cart-count">0</span>
-                          </a>
+                          </Link>
                         </li>
                         <li className="header-btn login-btn">
-                          <a href="/contact" className="btn">
+                          <Link to="/login" className="btn">
                             Log in
-                          </a>
-                        </li>
-                        <li className="header-btn free-btn">
-                          <a href="/contact" className="btn">
-                            Try For Free
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -137,9 +154,9 @@ export default function Header({ scroll, isMobileMenu, handleMobileMenu }) {
                       <i className="tg-flaticon-close-1" />
                     </div>
                     <div className="nav-logo">
-                      <a href="/">
+                      <Link to="/">
                         <img src={logo} alt="Logo" />
-                      </a>
+                      </Link>
                     </div>
                     <div className="tgmobile__menu-outer">
                       <MobileMenu />
@@ -147,9 +164,9 @@ export default function Header({ scroll, isMobileMenu, handleMobileMenu }) {
                     <div className="tgmenu__action">
                       <ul className="list-wrap">
                         <li className="header-btn login-btn">
-                          <a href="/" className="btn">
+                          <Link to="/" className="btn">
                             Log in
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>

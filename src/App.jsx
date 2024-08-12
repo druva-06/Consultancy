@@ -22,11 +22,7 @@ import "./assets/css/tg-cursor.css";
 import Custom404 from "./pages/404";
 
 function App() {
-  const [loading, setLoading] = useState(true);
   useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
     AOS.init({
       duration: 1000,
       mirror: true,
@@ -37,17 +33,13 @@ function App() {
 
   return (
     <>
-      {!loading ? (
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route exact path="/" element={<Home />} />
-            <Route path="/colleges" element={<Colleges />} />
-            <Route path="*" element={<Custom404 />} />
-          </Route>
-        </Routes>
-      ) : (
-        <Preloader />
-      )}
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/colleges" element={<Colleges />} />
+          <Route path="*" element={<Custom404 />} />
+        </Route>
+      </Routes>
     </>
   );
 }
