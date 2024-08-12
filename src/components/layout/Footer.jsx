@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import logo from "../../assets/img/logo/secondary_logo.png";
+
 export default function Footer() {
   return (
     <>
@@ -9,12 +12,9 @@ export default function Footer() {
                 <div className="footer-widget">
                   <div className="footer__about">
                     <div className="footer__logo logo">
-                      <a href="/">
-                        <img
-                          src="/assets/img/logo/secondary_logo.png"
-                          alt="img"
-                        />
-                      </a>
+                      <Link to="/">
+                        <img src={logo} alt="img" />
+                      </Link>
                     </div>
                     <p>
                       when an unknown printer took galley of type and scrambled
@@ -24,21 +24,21 @@ export default function Footer() {
                       <li className="address">463 7th Ave, NY 10018, USA</li>
                       <li className="number">+123 88 9900 456</li>
                       <li className="socials">
-                        <a href="#">
+                        <Link to="/">
                           <i className="fab fa-facebook-f" />
-                        </a>
-                        <a href="#">
+                        </Link>
+                        <Link to="/">
                           <i className="fab fa-twitter" />
-                        </a>
-                        <a href="#">
+                        </Link>
+                        <Link to="/">
                           <i className="fab fa-whatsapp" />
-                        </a>
-                        <a href="#">
+                        </Link>
+                        <Link to="/">
                           <i className="fab fa-aedin-in" />
-                        </a>
-                        <a href="#">
+                        </Link>
+                        <Link to="/">
                           <i className="fab fa-youtube" />
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -46,71 +46,86 @@ export default function Footer() {
               </div>
               <div className="col-xl-3 col-lg-4 col-sm-6">
                 <div className="footer-widget widget_nav_menu">
-                  <h4 className="fw-title">Resources</h4>
+                  <h4 className="fw-title">Quick Links</h4>
                   <ul className="list-wrap">
                     <li>
-                      <a href="/about-us">About</a>
+                      <Link to="/about-us">About Us</Link>
                     </li>
                     <li>
-                      <a href="/contact">Contact</a>
+                      <Link to="/explore">Explore</Link>
                     </li>
                     <li>
-                      <a href="/contact">Help Center</a>
+                      <Link to="/funds">Funds</Link>
                     </li>
                     <li>
-                      <a href="#">Refund</a>
+                      <Link to="/events">Events</Link>
                     </li>
                     <li>
-                      <a href="#">Conditions</a>
+                      <Link to="/services">Services</Link>
                     </li>
                     <li>
-                      <a href="#">Privacy Policy</a>
+                      <Link to="/blogs">Blogs</Link>
+                    </li>
+                    <li>
+                      <Link to="/contact-us">Contact Us</Link>
                     </li>
                   </ul>
                 </div>
               </div>
               <div className="col-xl-3 col-lg-4 col-sm-6">
                 <div className="footer-widget widget_nav_menu">
-                  <h4 className="fw-title">Courses</h4>
+                  <h4 className="fw-title">Study Aboard</h4>
                   <ul className="list-wrap">
                     <li>
-                      <a href="/courses">Life Coach</a>
+                      <Link to="/study-aboard/usa">Study in USA</Link>
                     </li>
                     <li>
-                      <a href="/courses">Business Coach</a>
+                      <Link to="/study-aboard/australia">Study in Australia</Link>
                     </li>
                     <li>
-                      <a href="/courses">Health Coach</a>
+                      <Link to="/study-aboard/canada">Study in Canada</Link>
                     </li>
                     <li>
-                      <a href="/courses">Development</a>
+                      <Link to="/study-aboard/uk">Study in UK</Link>
                     </li>
                     <li>
-                      <a href="/courses">Web Design</a>
+                      <Link to="/study-aboard/italy">Study in Italy</Link>
                     </li>
                     <li>
-                      <a href="/courses">SEO Optimize</a>
+                      <Link to="/study-aboard/ireland">Study in Ireland</Link>
+                    </li>
+                    <li>
+                      <Link to="/study-aboard/germany">Study in Germany</Link>
                     </li>
                   </ul>
                 </div>
               </div>
               <div className="col-xl-3 col-lg-4 col-sm-6">
-                <div className="footer-widget">
-                  <h4 className="fw-title">Working Hours</h4>
-                  <div className="footer__working-list">
-                    <div className="footer__working-item">
-                      <span className="day">Mon - Fri</span>
-                      <span className="time">8:00 AM - 5:00 PM</span>
-                    </div>
-                    <div className="footer__working-item">
-                      <span className="day">Mon - Fri</span>
-                      <span className="time">9:00 AM - 6:00 PM</span>
-                    </div>
-                    <div className="footer__working-item">
-                      <span className="day">Mon - Fri</span>
-                      <span className="time">10:00 AM - 8:00 PM</span>
-                    </div>
-                  </div>
+                <div className="footer-widget widget_nav_menu">
+                  <h4 className="fw-title">Study India</h4>
+                  <ul className="list-wrap">
+                    <li>
+                      <Link to="/study-india/bangalore">Study in Bangalore</Link>
+                    </li>
+                    <li>
+                      <Link to="/study-india/delhi">Study in Delhi</Link>
+                    </li>
+                    <li>
+                      <Link to="/study-india/mumbai">Study in Mumbai</Link>
+                    </li>
+                    <li>
+                      <Link to="/study-india/hyderabad">Study in Hyderabad</Link>
+                    </li>
+                    <li>
+                      <Link to="/study-india/kolkata">Study in Kolkata</Link>
+                    </li>
+                    <li>
+                      <Link to="/study-india/jaipur">Study in Jaipur</Link>
+                    </li>
+                    <li>
+                      <Link to="/study-india/chennai">Study in Chennai</Link>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -131,10 +146,10 @@ export default function Footer() {
                 <div className="copyright__menu">
                   <ul className="list-wrap d-flex flex-wrap justify-content-center justify-content-lg-end">
                     <li>
-                      <a href="#">Privacy Policy</a>
+                      <Link to="#">Privacy Policy</Link>
                     </li>
                     <li>
-                      <a href="#">Terms Conditions</a>
+                      <Link to="#">Terms Conditions</Link>
                     </li>
                   </ul>
                 </div>
