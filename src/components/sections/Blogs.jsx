@@ -1,4 +1,4 @@
-import BlogPost from "../blog/BlogPost"
+import BlogPost from "../blog/BlogPost";
 export default function Blogs() {
   return (
     <>
@@ -29,7 +29,7 @@ export default function Blogs() {
             </div>
           </div>
           <div className="row justify-content-center">
-            <BlogPost style={1} showItem={3} />
+            <BlogPost showItem={3} />
           </div>
         </div>
       </section>

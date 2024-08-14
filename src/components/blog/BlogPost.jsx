@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react"
 import data from "../../utils/blog.json"
-import BlogCard1 from "./BlogCard1"
-import BlogCard2 from "./BlogCard2"
+import BlogCard from "./BlogCard"
 import Pagination from "./Pagination"
 
-export default function BlogPost({ style, showItem, showPagination }) {
+export default function BlogPost({ showItem, showPagination }) {
     const [currentPage, setCurrentPage] = useState(1);
     const limit = showItem;
 
@@ -52,7 +51,7 @@ export default function BlogPost({ style, showItem, showPagination }) {
 
             {paginatedProducts.map(item => (
                 <React.Fragment key={item.id}>
-                    {style !== 2 ? <BlogCard1 item={item} /> : <BlogCard2 item={item} />}
+                    <BlogCard item={item} />
                 </React.Fragment>
             ))}
 

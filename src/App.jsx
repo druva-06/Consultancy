@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import AOS from "aos";
 import Home from "./pages/Home";
 import Preloader from "./components/elements/Preloader";
-import Colleges from "./pages/Colleges";
+import AbroadColleges from "./pages/AbroadColleges";
 import Layout from "./components/layout/Layout";
 import "aos/dist/aos.css";
 import "./assets/css/animate.min.css";
@@ -20,6 +20,8 @@ import "./assets/css/select2.min.css";
 import "./assets/css/spacing.css";
 import "./assets/css/tg-cursor.css";
 import Custom404 from "./pages/404";
+import IndiaColleges from "./pages/IndiaColleges";
+import OnlineColleges from "./pages/OnlineColleges";
 
 function App() {
   useEffect(() => {
@@ -36,7 +38,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route exact path="/" element={<Home />} />
-          <Route path="/colleges" element={<Colleges />} />
+          <Route path="/study-abroad/:country" element={<AbroadColleges collegeType={"abroad"}/>} />
+          <Route path="/study-india/:city" element={<IndiaColleges collegeType={"india"}/>} />
+          <Route path="/study-online/:city" element={<OnlineColleges collegeType={"online"}/>} />
           <Route path="*" element={<Custom404 />} />
         </Route>
       </Routes>

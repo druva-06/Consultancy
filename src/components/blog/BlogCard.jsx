@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function BlogCard1({ item }) {
+export default function BlogCard({ item }) {
   const imageUrl = new URL(`../../assets/img/blog/${item.img}`, import.meta.url).href;
   return (
     <>

@@ -1,20 +1,19 @@
 import { useDispatch, useSelector } from "react-redux";
-import { addInstructor } from "../../features/courseFilterSlice";
-import { instructorsCheck } from "../../features/courseSlice";
+import { addCity } from "../../../features/indiaEducation/indiaEducationFilterSlice";
+import { cityCheck } from "../../../features/indiaEducation/indiaEducationSlice";
 
-const InstructorLevel = () => {
-  const { instructors } = useSelector((state) => state.course) || {};
+const CityFilter = () => {
+  const { city } = useSelector((state) => state.indiaEducation) || {};
   const dispatch = useDispatch();
 
-  // instructor handler
-  const instructorHandler = (e, id) => {
-    dispatch(addInstructor(e.target.value));
-    dispatch(instructorsCheck(id));
+  const cityHandler = (e, id) => {
+    dispatch(addCity(e.target.value));
+    dispatch(cityCheck(id));
   };
 
   return (
     <ul className="list-wrap">
-      {instructors?.map((item) => (
+      {city?.map((item) => (
         <li key={item.id}>
           <div className="form-check">
             <label className="form-check-label">
@@ -23,7 +22,7 @@ const InstructorLevel = () => {
                 type="checkbox"
                 checked={item.isChecked}
                 value={item.value}
-                onChange={(e) => instructorHandler(e, item.id)}
+                onChange={(e) => cityHandler(e, item.id)}
               />
               {item.name}
             </label>
@@ -33,4 +32,5 @@ const InstructorLevel = () => {
     </ul>
   );
 };
-export default InstructorLevel;
+
+export default CityFilter;

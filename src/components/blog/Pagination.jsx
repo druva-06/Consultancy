@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 export default function Pagination({
     prev,
     currentPage,
@@ -14,9 +14,9 @@ export default function Pagination({
                     {getPaginationGroup.length <= 0 ? null : (
                         <li onClick={prev} className="next_link page-item">
                             {currentPage === 1 ? null : (
-                                <a>
+                                <Link>
                                     <i className="fa fa-arrow-left" />
-                                </a>
+                                </Link>
                             )}
                         </li>
                     )}
@@ -31,16 +31,16 @@ export default function Pagination({
                                     : "page-item"
                             }
                         >
-                            <a href="/" className="page-link">{item}</a>
+                            <Link to="/" className="page-link">{item}</Link>
                         </li>
                     )
                 })}
                       {getPaginationGroup.length <= 0 ? null : (
                     <li onClick={next} className="next_link page-item">
                         {currentPage >= pages ? null : (
-                            <a href="/">
+                            <Link to="/">
                                 <i className="fa fa-arrow-right" />
-                            </a>
+                            </Link>
                         )}
                     </li>
                 )}
