@@ -2,109 +2,122 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     city: [
-        {
-            id: 1,
-            name: "Mumbai",
-            isChecked: false,
-        },
-        {
-            id: 2,
-            name: "Delhi",
-            isChecked: false,
-        },
-        {
-            id: 3,
-            name: "Bangalore",
-            isChecked: false,
-        },
-        {
-            id: 4,
-            name: "Chennai",
-            isChecked: false,
-        },
-        {
-            id: 5,
-            name: "Kolkata",
-            isChecked: false,
-        },
+      {
+        id: 1,
+        name: "Delhi",
+        isChecked: false,
+        value: "delhi",
+      },
+      {
+        id: 2,
+        name: "Mumbai",
+        isChecked: false,
+        value: "mumbai",
+      },
+      {
+        id: 3,
+        name: "Bangalore",
+        isChecked: false,
+        value: "bangalore",
+      },
+      {
+        id: 4,
+        name: "Hyderabad",
+        isChecked: false,
+        value: "hyderabad",
+      },
+      {
+        id: 5,
+        name: "Pune",
+        isChecked: false,
+        value: "pune",
+      },
+      {
+        id: 6,
+        name: "Himaclal Pradesh",
+        isChecked: false,
+        value: "himachal-pradesh",
+      },
+      {
+        id: 7,
+        name: "Dehradun",
+        isChecked: false,
+        value: "dehradun",
+      },
+      {
+        id: 8,
+        name: "Andhra Pradesh",
+        isChecked: false,
+        value: "andhra-pradesh",
+      },
     ],
     course: [
-        {
-            id: 1,
-            name: "Engineering",
-            isChecked: false,
-        },
-        {
-            id: 2,
-            name: "Medical",
-            isChecked: false,
-        },
-        {
-            id: 3,
-            name: "Management",
-            isChecked: false,
-        },
-        {
-            id: 4,
-            name: "Science",
-            isChecked: false,
-        },
-        {
-            id: 5,
-            name: "Commerce",
-            isChecked: false,
-        },
+      {
+        id: 1,
+        name: "MBA",
+        isChecked: false,
+        value: "mba",
+      },
+      {
+        id: 2,
+        name: "PGDM",
+        isChecked: false,
+        value: "pgdm",
+      },
+      {
+        id: 3,
+        name: "MCA",
+        isChecked: false,
+        value: "mca",
+      },
     ],
     specializations: [
-        {
-            id: 1,
-            name: "Computer Science",
-            isChecked: false,
-        },
-        {
-            id: 2,
-            name: "Mechanical",
-            isChecked: false,
-        },
-        {
-            id: 3,
-            name: "Civil",
-            isChecked: false,
-        },
-        {
-            id: 4,
-            name: "Electrical",
-            isChecked: false,
-        },
-        {
-            id: 5,
-            name: "Electronics",
-            isChecked: false,
-        },
+      {
+        id: 1,
+        name: "Marketing management",
+        isChecked: false,
+        value: "marketing-management",
+      },
+      {
+        id: 2,
+        name: "Finance management",
+        isChecked: false,
+        value: "finance-management",
+      },
+      {
+        id: 3,
+        name: "Human Resource",
+        isChecked: false,
+        value: "human-resource",
+      },
+      {
+        id: 4,
+        name: "Business Analytics",
+        isChecked: false,
+        value: "business-analytics",
+      },
+      {
+        id: 5,
+        name: "Production & Operations ",
+        isChecked: false,
+        value: "production-operations",
+      },
     ],
     levelOfEducation: [
-        {
-            id: 1,
-            name: "Diploma",
-            isChecked: false,
-        },
-        {
-            id: 2,
-            name: "Bachelor's",
-            isChecked: false,
-        },
-        {
-            id: 3,
-            name: "Master's",
-            isChecked: false,
-        },
-        {
-            id: 4,
-            name: "PhD",
-            isChecked: false,
-        },
+      {
+        id: 1,
+        name: "Undergraduate",
+        isChecked: false,
+        value: "undergraduate",
+      },
+      {
+        id: 2,
+        name: "Postgraduate",
+        isChecked: false,
+        value: "postgraduate",
+      },
     ],
-}
+  };
 
 const onlineEducationSlice = createSlice({
     name: "onlineEducation",

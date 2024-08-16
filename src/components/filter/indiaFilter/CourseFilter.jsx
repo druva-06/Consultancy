@@ -3,7 +3,7 @@ import { addCourse } from "../../../features/indiaEducation/indiaEducationFilter
 import { courseCheck } from "../../../features/indiaEducation/indiaEducationSlice";
 
 const CourseFilter = () => {
-  const { course } = useSelector((state) => state.abroadEducation) || {};
+  const { course } = useSelector((state) => state.indiaEducation) || {};
   const dispatch = useDispatch();
 
   const courseHandler = (e, id) => {

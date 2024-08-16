@@ -1,7 +1,7 @@
 import { useState } from "react";
-import FilterColleges from "../components/colleges/FilterColleges";
-import AllColleges from "../components/colleges/AllAbroadColleges";
-export default function AbroadColleges({ collegeType}) {
+import FilterAbroadColleges from "../components/colleges/filter-colleges/FilterAbroadColleges";
+import AllColleges from "../components/colleges/all-colleges/AllAbroadColleges";
+export default function AbroadColleges({ collegeType }) {
   const [activeIndex, setActiveIndex] = useState(1);
   const handleOnClick = (index) => {
     setActiveIndex(index);
@@ -12,7 +12,7 @@ export default function AbroadColleges({ collegeType}) {
         <div className="container">
           <div className="row">
             <div className="col-xl-3 col-lg-4 order-2 order-lg-0">
-              <FilterColleges collegeType = {collegeType}/>
+              <FilterAbroadColleges />
             </div>
             <div className="col-xl-9 col-lg-8">
               <div className="tab-content" id="myTabContent">

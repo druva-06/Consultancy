@@ -1,6 +1,6 @@
 import { useState } from "react";
-import FilterColleges from "../components/colleges/FilterColleges";
-import AllColleges from "../components/colleges/AllIndiaColleges";
+import FilterIndiaColleges from "../components/colleges/filter-colleges/FilterIndiaColleges";
+import AllColleges from "../components/colleges/all-colleges/AllIndiaColleges";
 export default function IndiaColleges({ collegeType }) {
   const [activeIndex, setActiveIndex] = useState(1);
   const handleOnClick = (index) => {
@@ -12,7 +12,7 @@ export default function IndiaColleges({ collegeType }) {
         <div className="container">
           <div className="row">
             <div className="col-xl-3 col-lg-4 order-2 order-lg-0">
-              <FilterColleges collegeType={collegeType} />
+              <FilterIndiaColleges />
             </div>
             <div className="col-xl-9 col-lg-8">
               <div className="tab-content" id="myTabContent">

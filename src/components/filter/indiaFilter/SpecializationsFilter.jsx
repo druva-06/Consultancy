@@ -4,7 +4,7 @@ import { specializationsCheck } from "../../../features/indiaEducation/indiaEduc
 
 const SpecializationsFilter = () => {
   const { specializations } =
-    useSelector((state) => state.abroadEducation) || {};
+    useSelector((state) => state.indiaEducation) || {};
   const dispatch = useDispatch();
 
   // instructor handler

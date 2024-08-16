@@ -1,7 +1,29 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/img/logo/secondary_logo.png";
+import { addCountry } from "../../features/abroadEducation/abroadEducationFilterSlice";
+import { countryCheck } from "../../features/abroadEducation/abroadEducationSlice";
+import { addCity } from "../../features/indiaEducation/indiaEducationFilterSlice";
+import { cityCheck } from "../../features/indiaEducation/indiaEducationSlice";
+import { clearAbroadStoreFilters } from "../../features/utils/abroadUtils";
+import { clearIndiaStoreFilters } from "../../features/utils/indiaUtils";
+import { useDispatch } from "react-redux";
 
 export default function Footer() {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const handleAbroadNavigate = (countryId, countryValue) => {
+    clearAbroadStoreFilters(dispatch);
+    dispatch(addCountry(countryValue));
+    dispatch(countryCheck(countryId));
+  };
+
+  const handleIndiaNavigate = (cityId, cityValue) => {
+    clearIndiaStoreFilters(dispatch);
+    dispatch(addCity(cityValue));
+    dispatch(cityCheck(cityId));
+  };
+
   return (
     <>
       <footer className="footer-bg" data-bg-color="var(--tg-common-color-dark)">
@@ -77,25 +99,60 @@ export default function Footer() {
                   <h4 className="fw-title">Study Aboard</h4>
                   <ul className="list-wrap">
                     <li>
-                      <Link to="/study-aboard/usa">Study in USA</Link>
+                      <Link
+                        to="/study-abroad"
+                        onClick={() => handleAbroadNavigate(1, "usa")}
+                      >
+                        Study in USA
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/study-aboard/australia">Study in Australia</Link>
+                      <Link
+                        to="/study-abroad"
+                        onClick={() => handleAbroadNavigate(2, "australia")}
+                      >
+                        Study in Australia
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/study-aboard/canada">Study in Canada</Link>
+                      <Link
+                        to="/study-abroad"
+                        onClick={() => handleAbroadNavigate(3, "canada")}
+                      >
+                        Study in Canada
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/study-aboard/uk">Study in UK</Link>
+                      <Link
+                        to="/study-abroad/"
+                        onClick={() => handleAbroadNavigate(4, "uk")}
+                      >
+                        Study in UK
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/study-aboard/italy">Study in Italy</Link>
+                      <Link
+                        to="/study-abroad"
+                        onClick={() => handleAbroadNavigate(5, "italy")}
+                      >
+                        Study in Italy
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/study-aboard/ireland">Study in Ireland</Link>
+                      <Link
+                        to="/study-abroad"
+                        onClick={() => handleAbroadNavigate(6, "ireland")}
+                      >
+                        Study in Ireland
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/study-aboard/germany">Study in Germany</Link>
+                      <Link
+                        to="/study-abroad"
+                        onClick={() => handleAbroadNavigate(7, "germany")}
+                      >
+                        Study in Germany
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -105,25 +162,70 @@ export default function Footer() {
                   <h4 className="fw-title">Study India</h4>
                   <ul className="list-wrap">
                     <li>
-                      <Link to="/study-india/bangalore">Study in Bangalore</Link>
+                      <Link
+                        to="/study-india"
+                        onClick={() => handleIndiaNavigate(1, "delhi")}
+                      >
+                        Study in Delhi
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/study-india/delhi">Study in Delhi</Link>
+                      <Link
+                        to="/study-india"
+                        onClick={() => handleIndiaNavigate(2, "mumbai")}
+                      >
+                        Study in Mumbai
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/study-india/mumbai">Study in Mumbai</Link>
+                      <Link
+                        to="/study-india"
+                        onClick={() => handleIndiaNavigate(3, "bangalore")}
+                      >
+                        Study in Bangalore
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/study-india/hyderabad">Study in Hyderabad</Link>
+                      <Link
+                        to="/study-india"
+                        onClick={() => handleIndiaNavigate(4, "hyderabad")}
+                      >
+                        Study in Hyderabad
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/study-india/kolkata">Study in Kolkata</Link>
+                      <Link
+                        to="/study-india"
+                        onClick={() => handleIndiaNavigate(5, "pune")}
+                      >
+                        Study in Pune
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/study-india/jaipur">Study in Jaipur</Link>
+                      <Link
+                        to="/study-india"
+                        onClick={() =>
+                          handleIndiaNavigate(6, "himachal-pradesh")
+                        }
+                      >
+                        Study in Himaclal Pradesh
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/study-india/chennai">Study in Chennai</Link>
+                      <Link
+                        to="/study-india"
+                        onClick={() => handleIndiaNavigate(7, "dehradun")}
+                      >
+                        Study in Dehradun
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/study-india"
+                        onClick={() => handleIndiaNavigate(8, "andhra-pradesh")}
+                      >
+                        Study in Andhra Pradesh
+                      </Link>
                     </li>
                   </ul>
                 </div>

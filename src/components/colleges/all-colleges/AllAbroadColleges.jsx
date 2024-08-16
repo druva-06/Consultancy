@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import colleges from "../../data/colleges";
+import colleges from "../../../data/colleges";
 import {
   addPerPage,
   addSort,
@@ -7,14 +7,14 @@ import {
   clearCourse,
   clearSpecializations,
   clearIntake,
-} from "../../features/abroadEducation/abroadEducationFilterSlice";
+} from "../../../features/abroadEducation/abroadEducationFilterSlice";
 import {
   clearCountryToggle,
   clearCourseToggle,
   clearSpecializationsToggle,
   clearIntakeToggle,
-} from "../../features/abroadEducation/abroadEducationSlice";
-import CollegeCard from "./CollegeCard";
+} from "../../../features/abroadEducation/abroadEducationSlice";
+import CollegeCard from "../CollegeCard";
 
 const AllColleges = () => {
   const { collegeList, collegeSort } = useSelector(

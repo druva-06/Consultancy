@@ -1,6 +1,6 @@
 import { useState } from "react";
-import FilterColleges from "../components/colleges/FilterColleges";
-import AllColleges from "../components/colleges/AllOnlineColleges";
+import FilterOnlineColleges from "../components/colleges/filter-colleges/FilterOnlineEducation";
+import AllColleges from "../components/colleges/all-colleges/AllOnlineColleges";
 export default function OnlineColleges({ collegeType }) {
   const [activeIndex, setActiveIndex] = useState(1);
   const handleOnClick = (index) => {
@@ -12,7 +12,7 @@ export default function OnlineColleges({ collegeType }) {
         <div className="container">
           <div className="row">
             <div className="col-xl-3 col-lg-4 order-2 order-lg-0">
-              <FilterColleges collegeType={collegeType} />
+              <FilterOnlineColleges />
             </div>
             <div className="col-xl-9 col-lg-8">
               <div className="tab-content" id="myTabContent">

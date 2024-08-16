@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import colleges from "../../data/colleges";
+import colleges from "../../../data/colleges";
 import {
   addPerPage,
   addSort,
@@ -7,14 +7,14 @@ import {
   clearCourse,
   clearSpecializations,
   clearLevelOfEducation,
-} from "../../features/onlineEducation/onlineEducationFilterSlice";
+} from "../../../features/onlineEducation/onlineEducationFilterSlice";
 import {
   clearCityToggle,
   clearCourseToggle,
   clearSpecializationsToggle,
   clearLevelOfEducationToggle,
-} from "../../features/onlineEducation/onlineEducationSlice";
-import CollegeCard from "./CollegeCard";
+} from "../../../features/onlineEducation/onlineEducationSlice";
+import CollegeCard from "../CollegeCard";
 
 const AllOnlineColleges = () => {
   const { collegeList, collegeSort } = useSelector(

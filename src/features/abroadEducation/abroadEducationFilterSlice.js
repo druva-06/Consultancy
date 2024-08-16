@@ -21,7 +21,7 @@ const initialState = {
 };
 
 export const abroadEducationFilterSlice = createSlice({
-  name: "filter",
+  name: "abroadEducationFilter",
   initialState,
   reducers: {
     addCountry: (state, { payload }) => {

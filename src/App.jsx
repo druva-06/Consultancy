@@ -38,9 +38,18 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route exact path="/" element={<Home />} />
-          <Route path="/study-abroad/:country" element={<AbroadColleges collegeType={"abroad"}/>} />
-          <Route path="/study-india/:city" element={<IndiaColleges collegeType={"india"}/>} />
-          <Route path="/study-online/:city" element={<OnlineColleges collegeType={"online"}/>} />
+          <Route
+            path="/study-abroad"
+            element={<AbroadColleges collegeType={"abroad"} />}
+          />
+          <Route
+            path="/study-india"
+            element={<IndiaColleges collegeType={"india"} />}
+          />
+          <Route
+            path="/study-online"
+            element={<OnlineColleges collegeType={"online"} />}
+          />
           <Route path="*" element={<Custom404 />} />
         </Route>
       </Routes>
