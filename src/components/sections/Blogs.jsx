@@ -2,37 +2,53 @@ import BlogPost from "../blog/BlogPost";
 export default function Blogs() {
   return (
     <>
-      <section className="blog-area blog-bg-circle section-pt-150 section-pb-90">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-xl-6 col-lg-7 col-md-8">
-              <div className="section__title text-center mb-40">
-                <span className="sub-title">Always Smart To Hear News</span>
-                <h2 className="title tg-svg">
-                  Latest{" "}
-                  <span className="position-relative">
-                    <span
-                      className="svg-icon"
-                      id="svg-10"
-                      data-svg-icon="assets/img/icons/title_shape.svg"
-                    />
-                    News
-                  </span>
-                  Blog
-                </h2>
-                <p className="desc">
-                  Receive huge benefits with our lifetime Plumbing Receive huge
-                  benefits with our lifetime Plumbing email address will be
-                  shown
-                </p>
-              </div>
-            </div>
-          </div>
+      <section className="online-area">
+        <div className="container max-width-1000">
+          <h1 className="text-center section__heading mb-25">
+            Latest Blogs & News
+          </h1>
           <div className="row justify-content-center">
             <BlogPost showItem={3} />
           </div>
         </div>
       </section>
+
+      {/* <section className="online-area">
+      <div className="container max-width-1000">
+        <h1 className="text-center section__heading mb-25">Student Gallery</h1>
+
+        <div className="row align-items-center section">
+          <div className="col-xl-6">
+            <div className="">
+              <div className="section__title">
+                <h2 className="title">
+                  Quis autem vel eum iure reprehenderit 
+                </h2>
+                <span className="sub-title">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </span>
+              </div>
+              <div className="section__btn">View All</div>
+            </div>
+          </div>
+          <div className="col-xl-6 d-flex flex-column gap-2">
+            <div className="row gap-2 d-flex flex-row justfiy-content-center">
+              <span className="col-0 col-lg-1"></span>
+              <img className="col-5 col-lg-5" src={onlineImage} alt="img" />
+              <img className="col-5 col-lg-5" src={onlineImage} alt="img" />
+            </div>
+            <div className="row gap-2 d-flex flex-row justify-content-center">
+              <span className="col-0 col-lg-1"></span>
+              <img className="col-5 col-lg-5" src={onlineImage} alt="img" />
+              <img className="col-5 col-lg-5" src={onlineImage} alt="img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> */}
     </>
   );
 }

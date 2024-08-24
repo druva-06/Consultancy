@@ -1,32 +1,24 @@
 import React from "react";
+import onlineImage from "../../assets/img/others/online_img.jpg";
 
 export default function BlogCard({ item }) {
-  const imageUrl = new URL(`../../assets/img/blog/${item.img}`, import.meta.url).href;
+  const imageUrl = new URL(`../../assets/img/blog/${item.img}`, import.meta.url)
+    .href;
   return (
     <>
-      <div className="col-lg-4 col-md-6 col-sm-9">
-        <div className="blog__post-item shine__animate-item">
-          <div className="blog__post-thumb">
-            <a href="/" className="shine__animate-link">
-              <img src={imageUrl} alt="img" />
-            </a>
-          </div>
-          <div className="blog__post-content">
-            <a href="/" className="cat">
-              {item.category}
-            </a>
-            <h4 className="title">
-              <a href="/">{item.title}</a>
-            </h4>
-            <ul className="list-wrap blog__post-meta">
-              <li>
-                <i className="flaticon-account" /> by{" "}
-                <a href="/">{item.author}</a>
-              </li>
-              <li>
-                <i className="flaticon-calendar-date" /> 23 Aug, 2023
-              </li>
-            </ul>
+      <div className="col-lg-4 col-md-6 col-sm-9 d-flex flex-column gap-4">
+        <div className="row">
+          <img src={onlineImage} alt="img" />
+        </div>
+        <div className="row">
+          <div className="">
+            <div className="section__title">
+              <h2 className="title">Blog Title </h2>
+              <span className="sub-title">
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </span>
+            </div>
+            <div className="section__btn">Read More</div>
           </div>
         </div>
       </div>

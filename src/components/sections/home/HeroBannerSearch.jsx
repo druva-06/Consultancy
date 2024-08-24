@@ -1,6 +1,6 @@
 export default function HeroBannerSearch({ currentActive }) {
   return (
-    <div className="filter__content">
+    <div className="row filter__content">
       <span className="text-center mb-20">Study Abroad</span>
       <div className="row text-center gap-2">
         <select className="col-12 col-lg filter__select">

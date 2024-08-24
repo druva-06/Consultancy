@@ -28,24 +28,22 @@ export default function HeroBanner() {
   return (
     <>
       <section className="hero-area hero-bg-1 section-pt-200 section-pb-90">
-        <div className="container max-width-800">
-          <div className="row">
-            <div className="row section__title text-center">
-              <h2 className="title">Hero section</h2>
-            </div>
-            <div className="row filter__tab mb-10">
-              {data.map((item) => (
-                <span
-                  key={item.id}
-                  className="col-6 col-md nav-item"
-                  onClick={() => handleClick(item)}
-                >
-                  {item.title}
-                </span>
-              ))}
-            </div>
-            <HeroBannerSearch item={currentActive}/>
+        <div className="container max-width-1000">
+          {/* <div className="row section__title text-center">
+            <h2 className="title">Hero section</h2>
+          </div> */}
+          <div className="row filter__tab mb-10">
+            {data.map((item) => (
+              <span
+                key={item.id}
+                className="col-6 col-md nav-item"
+                onClick={() => handleClick(item)}
+              >
+                {item.title}
+              </span>
+            ))}
           </div>
+          <HeroBannerSearch item={currentActive} />
         </div>
       </section>
     </>

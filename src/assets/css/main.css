@@ -59,13 +59,13 @@
     --tg-common-color-teal: #219653;
     --tg-common-color-cyan: #0dcaf0;
     --tg-common-color-white: #fff;
-    --tg-common-color-gray: #E7EFFC;
+    --tg-common-color-gray: #E8E8E8;
     --tg-common-color-gray-2: #F4F7FB;
     --tg-common-color-gray-3: #F5F7FB;
     --tg-common-color-dark: #061E43;
     --tg-common-color-black: #000;
     --tg-body-color: #39557E;
-    --tg-heading-color: #DF4949;
+    --tg-heading-color: #2C2C2C;
     --tg-theme-primary: #1363DF;
     --tg-theme-secondary: #082A5E;
     --tg-border-1: #ECECEC;
@@ -92,8 +92,8 @@ body {
     line-height: var(--tg-body-line-height);
 }
 
-.max-width-800 {
-    max-width: 800px !important;
+.max-width-1000 {
+    max-width: 900px !important;
 }
 
 img,
@@ -799,27 +799,38 @@ textarea {
 /*=============================
 	00. Section Title
 ===============================*/
-.section__title .sub-title {
-    display: inline-block;
-    line-height: 1;
-    background: var(--tg-common-color-gray);
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -o-border-radius: 4px;
-    -ms-border-radius: 4px;
-    border-radius: 4px;
-    padding: 7px 15px;
+
+.section__heading {
+    font-size: 40px;
     font-weight: var(--tg-fw-medium);
-    color: var(--tg-theme-primary);
-    margin: 0 0 13px;
+}
+
+.section {
+    background: var(--tg-common-color-gray);
+    padding: 40px 30px;
 }
 
 .section__title .title {
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: var(--tg-fw-bold);
     color: var(--tg-heading-color);
+    text-transform: capitalize;
+}
+
+.section__title .sub-title {
+    font-size: 14px;
     font-weight: var(--tg-fw-medium);
-    margin: 0 0 60px 0;
-    text-transform: uppercase;
+    color: #898989;
+}
+
+.section__btn {
+    color: var(--tg-common-color-white);
+    background-color: #302E2E;
+    width: fit-content;
+    margin-top: 10px;
+    padding: 5px 50px;
+    font-size: 14px;
+    font-weight: var(--tg-fw-medium);
 }
 
 /* @media (max-width: 767.98px) {
@@ -930,22 +941,22 @@ textarea {
     /* -webkit-appearance: none; 
     -moz-appearance: none; 
     appearance: none;  */
-   
+
 }
 
-.filter__button{
+.filter__button {
     border: none;
     background-color: #C1C1C1;
     color: var(--tg-common-color-black);
     font-size: 14px;
-    padding: 0px 10px;
+    padding: 10px;
 }
 
-.filter__button > span{
+.filter__button>span {
     margin-right: 10px;
 }
 
-.filter__button > svg{
+.filter__button>svg {
     margin-top: -3px;
 }
 
@@ -5773,7 +5784,7 @@ textarea {
     10. Online
 ===============================*/
 .online-area {
-    padding: 150px 0;
+    padding: 100px 0;
 }
 
 @media (max-width: 1199.98px) {
@@ -5803,7 +5814,7 @@ textarea {
 
 @media (max-width: 767.98px) {
     .online__image-wrap {
-        margin: 0 0 150px;
+        margin: 20px 0 0px;
     }
 }
 
