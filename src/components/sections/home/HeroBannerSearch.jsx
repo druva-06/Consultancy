@@ -1,18 +1,22 @@
 import educationDetails from "../../../utils/education-details.json";
 
 export default function HeroBannerSearch({ currentActive }) {
-  console.log(console.log(currentActive.id));
   return (
     <div className="row filter__content">
       <span className="text-center mb-20">{currentActive.title}</span>
       <div className="row text-center gap-2">
-        <select className="col-12 col-lg filter__select">
+        <select
+          className="col-12 col-lg filter__select"
+          defaultValue={
+            currentActive.id === "study-abroad" ? "Country" : "City"
+          }
+        >
           {currentActive.id === "study-abroad" ? (
-            <option key="location" disabled selected>
+            <option key="location" disabled>
               Country
             </option>
           ) : (
-            <option key="location" disabled selected>
+            <option key="location" disabled>
               City
             </option>
           )}
@@ -24,29 +28,39 @@ export default function HeroBannerSearch({ currentActive }) {
                 <option key={item.id}>{item.name}</option>
               ))}
         </select>
-        <select className="col-12 col-lg filter__select">
-          <option key="course" disabled selected>
+        <select className="col-12 col-lg filter__select" defaultValue="Course">
+          <option key="course" disabled>
             Course
           </option>
           {educationDetails[currentActive.id].course.map((item) => (
             <option key={item.id}>{item.name}</option>
           ))}
         </select>
-        <select className="col-12 col-lg filter__select">
-          <option key="specializations" disabled selected>
+        <select
+          className="col-12 col-lg filter__select"
+          defaultValue="Specialization"
+        >
+          <option key="specializations" disabled>
             Specialization
           </option>
           {educationDetails[currentActive.id].specializations.map((item) => (
             <option key={item.id}>{item.name}</option>
           ))}
         </select>
-        <select className="col-12 col-lg filter__select">
+        <select
+          className="col-12 col-lg filter__select"
+          defaultValue={
+            currentActive.id === "study-abroad"
+              ? "Intake"
+              : "Level Of Education"
+          }
+        >
           {currentActive.id === "study-abroad" ? (
-            <option key="education-type" disabled selected>
+            <option key="education-type" disabled>
               Intake
             </option>
           ) : (
-            <option key="education-type" disabled selected>
+            <option key="education-type" disabled>
               Level Of Education
             </option>
           )}
