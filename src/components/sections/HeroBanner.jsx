@@ -2,22 +2,21 @@ import HeroBannerSearch from "./home/HeroBannerSearch";
 import { useState } from "react";
 
 export default function HeroBanner() {
-  
   const data = [
     {
-      id: 'study-abroad',
+      id: "study-abroad",
       title: "Study Abroad",
     },
     {
-      id: 'study-india',
+      id: "study-india",
       title: "Study India",
     },
     {
-      id: 'study-online',
+      id: "study-online",
       title: "Study Online",
     },
     {
-      id: 'jobs',
+      id: "jobs",
       title: "Jobs",
     },
   ];
@@ -28,8 +27,18 @@ export default function HeroBanner() {
   };
   return (
     <>
-      <section className="hero-area hero-bg-1 section-pt-200 section-pb-90">
+      <section
+        className="hero-area hero-bg-1 section-pt-200 pt-230 section-pb-90"
+        style={{
+          backgroundImage: `url('/src/assets/img/banner/hero_banner_bg.png')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <div className="container max-width-1000">
+          <h1 className="text-center mb-40" style={{ color: "#FFF" }}>
+            Find the Colleges & Courses <br /> that are best for you
+          </h1>
           <div className="row filter__tab mb-10">
             {data.map((item) => (
               <span

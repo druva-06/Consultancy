@@ -5,7 +5,7 @@ import EventCard from "../event/EventCard";
 export default function ListOfEvents() {
   return (
     <>
-      <section className="online-area tg-motion-effects">
+      <section className="event-area tg-motion-effects">
         <div className="container d-flex flex-column gap-5">
           <div className="row justify-content-center">
             <div className="col-xl-6 col-lg-7 col-md-8">

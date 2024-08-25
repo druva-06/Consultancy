@@ -3928,7 +3928,6 @@ textarea {
 
 .courses-area {
     position: relative;
-    background-color: var(--tg-common-color-gray-2);
     z-index: 1;
 }
 
@@ -7025,9 +7024,19 @@ textarea {
     border-radius: 2px;
 }
 
+
+.event-area{
+    padding: 100px 0;
+    background-color: var(--tg-common-color-gray);
+}
+
 /*=============================
     13. Mentor
 ===============================*/
+.mentors-area {
+    background-color: var(--tg-common-color-gray);
+}
+
 .mentors__item {
     border: 1px solid #D7DCE3;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.06);
@@ -9058,6 +9067,7 @@ textarea {
 /*=============================
     20. Blog
 ===============================*/
+
 .section-pt-150 {
     padding-top: 150px;
 }
