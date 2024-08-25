@@ -30,7 +30,7 @@ export default function HeroBanner() {
       <section
         className="hero-area hero-bg-1 section-pt-200 pt-230 section-pb-90"
         style={{
-          backgroundImage: `url('/src/assets/img/bg/hero_bg1.avif')`,
+          backgroundImage: `url('img/hero_bg.png')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
