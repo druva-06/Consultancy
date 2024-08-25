@@ -991,7 +991,8 @@ textarea {
 ===============================*/
 
 .filter__tab {
-    background-color: #E8E8E8;
+    background-color: #EFF7FF;
+
     color: var(--tg-common-color-black)
 }
 
@@ -1001,7 +1002,7 @@ textarea {
     font-weight: var(--tg-fw-medium);
     padding: 15px 0px 13px 0px;
     cursor: pointer;
-    border-bottom: 2px solid #E8E8E8;
+    border-bottom: 2px solid #EFF7FF;
 }
 
 .filter__tab .nav-item.active {
@@ -1011,7 +1012,7 @@ textarea {
 .filter__content {
     display: flex;
     flex-direction: column;
-    background-color: #E8E8E8;
+    background-color: #EFF7FF;
     padding: 60px 40px;
 }
 
@@ -1035,8 +1036,8 @@ textarea {
 
 .filter__button {
     border: none;
-    background-color: #C1C1C1;
-    color: var(--tg-common-color-black);
+    background-color: #2271BB;
+    color: var(--tg-common-color-white);
     font-size: 14px;
     padding: 10px;
 }

@@ -1,22 +1,39 @@
-import EventsFilter from "../elements/EventsFilter";
+import { Link } from "react-router-dom";
 
-import shape01 from "../../assets/img/courses/course_shape01.png";
-import shape02 from "../../assets/img/courses/course_shape02.png";
+import EventCard from "../event/EventCard";
 
 export default function ListOfEvents() {
   return (
     <>
-      <section className="courses-area section-pt-120 section-pb-90">
-        <div className="container">
-          <EventsFilter />
-        </div>
-        <div className="courses__shapes">
-          <div className="courses__shapes-item alltuchtopdown">
-            <img src={shape01} alt="shape" />
+      <section className="online-area tg-motion-effects">
+        <div className="container d-flex flex-column gap-5">
+          <div className="row justify-content-center">
+            <div className="col-xl-6 col-lg-7 col-md-8">
+              <div className="section__title text-center mb-50">
+                <span className="sub-title">Always Smart To Hear News</span>
+                <h2 className="title tg-svg">
+                  Latest{" "}
+                  <span className="position-relative">
+                    <span
+                      className="svg-icon"
+                      id="svg-10"
+                      data-svg-icon="assets/img/icons/title_shape.svg"
+                    />
+                    News
+                  </span>
+                  Blog
+                </h2>
+                <p className="desc">
+                  Receive huge benefits with our lifetime Plumbing Receive huge
+                  benefits with our lifetime Plumbing email address will be
+                  shown
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="courses__shapes-item alltuchtopdown">
-            <img src={shape02} alt="shape" />
-          </div>
+          <EventCard />
+          <EventCard />
+          <EventCard />
         </div>
       </section>
     </>
