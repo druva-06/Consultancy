@@ -2,21 +2,22 @@ import HeroBannerSearch from "./home/HeroBannerSearch";
 import { useState } from "react";
 
 export default function HeroBanner() {
+  
   const data = [
     {
-      id: 1,
+      id: 'study-abroad',
       title: "Study Abroad",
     },
     {
-      id: 2,
+      id: 'study-india',
       title: "Study India",
     },
     {
-      id: 3,
+      id: 'study-online',
       title: "Study Online",
     },
     {
-      id: 4,
+      id: 'jobs',
       title: "Jobs",
     },
   ];
@@ -29,21 +30,21 @@ export default function HeroBanner() {
     <>
       <section className="hero-area hero-bg-1 section-pt-200 section-pb-90">
         <div className="container max-width-1000">
-          {/* <div className="row section__title text-center">
-            <h2 className="title">Hero section</h2>
-          </div> */}
           <div className="row filter__tab mb-10">
             {data.map((item) => (
               <span
                 key={item.id}
-                className="col-6 col-md nav-item"
+                className={
+                  "col-6 col-md nav-item" +
+                  (currentActive.id === item.id ? " active" : "")
+                }
                 onClick={() => handleClick(item)}
               >
                 {item.title}
               </span>
             ))}
           </div>
-          <HeroBannerSearch item={currentActive} />
+          <HeroBannerSearch currentActive={currentActive} />
         </div>
       </section>
     </>

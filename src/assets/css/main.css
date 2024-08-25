@@ -915,7 +915,7 @@ textarea {
     border-bottom: 2px solid #E8E8E8;
 }
 
-.filter__tab .nav-item:hover {
+.filter__tab .nav-item.active {
     border-bottom: 2px solid var(--tg-common-color-black);
 }
 

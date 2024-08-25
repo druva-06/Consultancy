@@ -1,42 +1,65 @@
+import educationDetails from "../../../utils/education-details.json";
+
 export default function HeroBannerSearch({ currentActive }) {
+  console.log(console.log(currentActive.id));
   return (
     <div className="row filter__content">
-      <span className="text-center mb-20">Study Abroad</span>
+      <span className="text-center mb-20">{currentActive.title}</span>
       <div className="row text-center gap-2">
         <select className="col-12 col-lg filter__select">
-          <option>Categories</option>
-          <option>Business</option>
-          <option>Data Science</option>
-          <option>Art Design</option>
-          <option>Marketing</option>
-          <option>Finance</option>
+          {currentActive.id === "study-abroad" ? (
+            <option key="location" disabled selected>
+              Country
+            </option>
+          ) : (
+            <option key="location" disabled selected>
+              City
+            </option>
+          )}
+          {currentActive.id === "study-abroad"
+            ? educationDetails[currentActive.id].country.map((item) => (
+                <option key={item.id}>{item.name}</option>
+              ))
+            : educationDetails[currentActive.id].city.map((item) => (
+                <option key={item.id}>{item.name}</option>
+              ))}
         </select>
         <select className="col-12 col-lg filter__select">
-          <option>Categories</option>
-          <option>Business</option>
-          <option>Data Science</option>
-          <option>Art Design</option>
-          <option>Marketing</option>
-          <option>Finance</option>
+          <option key="course" disabled selected>
+            Course
+          </option>
+          {educationDetails[currentActive.id].course.map((item) => (
+            <option key={item.id}>{item.name}</option>
+          ))}
         </select>
         <select className="col-12 col-lg filter__select">
-          <option>Categories</option>
-          <option>Business</option>
-          <option>Data Science</option>
-          <option>Art Design</option>
-          <option>Marketing</option>
-          <option>Finance</option>
+          <option key="specializations" disabled selected>
+            Specialization
+          </option>
+          {educationDetails[currentActive.id].specializations.map((item) => (
+            <option key={item.id}>{item.name}</option>
+          ))}
         </select>
         <select className="col-12 col-lg filter__select">
-          <option>Categories</option>
-          <option>Business</option>
-          <option>Data Science</option>
-          <option>Art Design</option>
-          <option>Marketing</option>
-          <option>Finance</option>
+          {currentActive.id === "study-abroad" ? (
+            <option key="education-type" disabled selected>
+              Intake
+            </option>
+          ) : (
+            <option key="education-type" disabled selected>
+              Level Of Education
+            </option>
+          )}
+          {currentActive.id === "study-abroad"
+            ? educationDetails[currentActive.id].intake.map((item) => (
+                <option key={item.id}>{item.name}</option>
+              ))
+            : educationDetails[currentActive.id].levelOfEducation.map(
+                (item) => <option key={item.id}>{item.name}</option>
+              )}
         </select>
         <button className="col-12 col-lg filter__button">
-          <span>Search</span> 
+          <span>Search</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
