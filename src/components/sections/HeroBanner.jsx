@@ -1,4 +1,4 @@
-import HeroBannerSearch from "./home/HeroBannerSearch";
+import HeroBannerSearch from "./HeroBannerSearch";
 import { useState } from "react";
 
 export default function HeroBanner() {

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import FilterOnlineColleges from "../components/colleges/filter-colleges/FilterOnlineEducation";
 import AllColleges from "../components/colleges/all-colleges/AllOnlineColleges";
+import HeroBannerSearch from "../components/sections/HeroBannerSearch";
+
 export default function OnlineColleges({ collegeType }) {
   const [activeIndex, setActiveIndex] = useState(1);
   const handleOnClick = (index) => {
@@ -8,6 +10,18 @@ export default function OnlineColleges({ collegeType }) {
   };
   return (
     <>
+      <section
+        className="hero-area hero-bg-1 section-pt-200 pt-230 section-pb-90"
+        style={{
+          backgroundImage: `url('img/hero_bg.png')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="container max-width-1000">
+          <HeroBannerSearch currentActive={collegeType} />
+        </div>
+      </section>
       <section className="all-courses-area section-py-120">
         <div className="container">
           <div className="row">

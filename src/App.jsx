@@ -40,15 +40,27 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route
             path="/study-abroad"
-            element={<AbroadColleges collegeType={"abroad"} />}
+            element={
+              <AbroadColleges
+                collegeType={{ id: "study-abroad", title: "Study Abroad" }}
+              />
+            }
           />
           <Route
             path="/study-india"
-            element={<IndiaColleges collegeType={"india"} />}
+            element={
+              <IndiaColleges
+                collegeType={{ id: "study-india", title: "Study India" }}
+              />
+            }
           />
           <Route
             path="/study-online"
-            element={<OnlineColleges collegeType={"online"} />}
+            element={
+              <OnlineColleges
+                collegeType={{ id: "study-online", title: "Study Online" }}
+              />
+            }
           />
           <Route path="*" element={<Custom404 />} />
         </Route>
