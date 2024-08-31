@@ -24,6 +24,8 @@ import Custom404 from "./pages/404";
 import IndiaColleges from "./pages/IndiaColleges";
 import OnlineColleges from "./pages/OnlineColleges";
 import ContactUs from "./pages/ContactUs";
+import Blogs from "./pages/Blogs";
+import Events from "./pages/Events";
 
 function App() {
   useEffect(() => {
@@ -42,6 +44,8 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/about-us" element={<AboutUs breadcrumbTitle="About Us"/>} />
           <Route exact path="/contact-us" element={<ContactUs breadcrumbTitle="Contact with Us"/>} />
+          <Route exact path="/blogs" element={<Blogs breadcrumbTitle="Blog Post"/>} />
+          <Route exact path="/events" element={<Events breadcrumbTitle="Events"/>} />
           <Route
             path="/study-abroad"
             element={
