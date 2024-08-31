@@ -11235,3 +11235,104 @@ body {
     letter-spacing: 1px;
     display: none;
 }
+
+/*=============================
+    15. Modal
+===============================*/
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-container {
+    background: white;
+    padding: 40px 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to top, #D3E4F4 50%, #fff 50%);
+}
+
+.modal-body{
+    
+}
+
+.modal-label{
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--tg-common-color-black);
+}
+
+.modal-heading{
+    font-size: 24px;
+    color: #2C2C2C;
+    margin: 0 auto;
+}
+
+.modal-select{
+    border: none;
+    border-bottom: 1px solid #6F6F6F
+}
+
+.modal-input-field {
+    border: none;
+    border-bottom: 1px solid #6F6F6F;
+    width: 140px;
+}
+
+.modal-clickable-text{
+    font-size: 15px;
+    color: #2271BB;
+    cursor: pointer;
+}
+
+.modal-button{
+    background: #2271BB;
+    color: white;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+.modal-close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-content-bg {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 1px solid #D1E9FF;
+    padding: 0px 20px;
+    background: #fff;
+    overflow-y: auto;
+    max-height: 460px;
+}
+
+.modal-select-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #6F6F6F;
+    cursor: pointer;
+    height: 45px;
+    font-size: 14px;
+    line-height: 20px;
+}

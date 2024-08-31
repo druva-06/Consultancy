@@ -1,7 +1,8 @@
 import { useState } from "react";
 
 import educationDetails from "../../utils/education-details.json";
-import SignUpModal from "../modal/signup-modal/SignUpModal";
+import SignUpModal from "../modal/SignUpModal";
+import AbroadMarksModal from "../modal/AbroadMarksModal";
 
 export default function HeroBannerSearch({ currentActive }) {
   const [openModal, setOpenModal] = useState(false);
@@ -99,7 +100,7 @@ export default function HeroBannerSearch({ currentActive }) {
           </button>
         </div>
       </div>
-      {openModal && <SignUpModal setOpenModal={setOpenModal} />}
+      {openModal && <AbroadMarksModal setOpenModal={setOpenModal} />}
     </>
   );
 }

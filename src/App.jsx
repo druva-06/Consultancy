@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import AOS from "aos";
 import Home from "./pages/Home";
+import AboutUs from "./pages/AboutUs";
 import Preloader from "./components/elements/Preloader";
 import AbroadColleges from "./pages/AbroadColleges";
 import Layout from "./components/layout/Layout";
@@ -22,6 +23,7 @@ import "./assets/css/tg-cursor.css";
 import Custom404 from "./pages/404";
 import IndiaColleges from "./pages/IndiaColleges";
 import OnlineColleges from "./pages/OnlineColleges";
+import ContactUs from "./pages/ContactUs";
 
 function App() {
   useEffect(() => {
@@ -38,6 +40,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route exact path="/" element={<Home />} />
+          <Route exact path="/about-us" element={<AboutUs breadcrumbTitle="About Us"/>} />
+          <Route exact path="/contact-us" element={<ContactUs breadcrumbTitle="Contact with Us"/>} />
           <Route
             path="/study-abroad"
             element={
