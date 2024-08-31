@@ -26,6 +26,8 @@ import OnlineColleges from "./pages/OnlineColleges";
 import ContactUs from "./pages/ContactUs";
 import Blogs from "./pages/Blogs";
 import Events from "./pages/Events";
+import Shortlisted from "./pages/Shortlisted";
+import CollegeDetails from "./pages/CollegeDetails";
 
 function App() {
   useEffect(() => {
@@ -42,10 +44,32 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/about-us" element={<AboutUs breadcrumbTitle="About Us"/>} />
-          <Route exact path="/contact-us" element={<ContactUs breadcrumbTitle="Contact with Us"/>} />
-          <Route exact path="/blogs" element={<Blogs breadcrumbTitle="Blog Post"/>} />
-          <Route exact path="/events" element={<Events breadcrumbTitle="Events"/>} />
+          <Route
+            exact
+            path="/about-us"
+            element={<AboutUs breadcrumbTitle="About Us" />}
+          />
+          <Route
+            exact
+            path="/contact-us"
+            element={<ContactUs breadcrumbTitle="Contact with Us" />}
+          />
+          <Route
+            exact
+            path="/blogs"
+            element={<Blogs breadcrumbTitle="Blog Post" />}
+          />
+          <Route
+            exact
+            path="/events"
+            element={<Events breadcrumbTitle="Events" />}
+          />
+          <Route
+            exact
+            path="/cart"
+            element={<Shortlisted breadcrumbTitle="Shortlisted" />}
+          />
+          <Route exact path="/colleges/:collegeId" element={<CollegeDetails />} />
           <Route
             path="/study-abroad"
             element={
